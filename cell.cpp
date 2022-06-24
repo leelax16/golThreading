@@ -2,6 +2,7 @@
 #include <stdexcept>
 
 
+
 using namespace std;
 
 Cell::Cell(int x, int y){
@@ -12,6 +13,7 @@ Cell::Cell(int x, int y){
 
 }
 
+
 int Cell::getx(){
     return this->x;
 }
@@ -20,12 +22,20 @@ int Cell::gety(){
     return this->y;
 }
 
-bool Cell::isAlive(){
+int Cell::getNbrs(){
+    return this->nbrs;
+}
+
+int Cell::isAlive(){
     return this->live;  
 }
 
 void Cell::setLive(){
     this->live = 1;
+}
+
+void Cell::setNbr(int count){
+    this->nbrs = count;
 }
 
 void Cell::addNbr(){
@@ -34,5 +44,5 @@ void Cell::addNbr(){
 
 void Cell::reset(){
     this->nbrs = 0;
+    this->live = 0;
 }
-

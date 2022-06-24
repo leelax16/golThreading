@@ -1,16 +1,23 @@
-
+#pragma once
+#include <string.h>
 
 class Cell{
     private:
-        int x, y, nbrs;
-        bool live;
+        int x, y;
+        int nbrs;
+        int live;
 
     public:
+
         Cell(int x, int y);
-        ~Cell();
+        Cell();
         int getx();
         int gety();
-        bool isAlive();
+        int getNbrs();
+        //checks if live variable is 1
+        int isAlive();
+        //sets the nbr value
+        void setNbr(int count);
         //adds 1 to neighbor count
         void addNbr();
         //sets cell alive
@@ -18,5 +25,6 @@ class Cell{
         //resets neighbor count to 0
         void reset();
 
+        //temp functions to test in terminal
 
 };
