@@ -7,53 +7,66 @@ using namespace std;
 
 
 
-//constructor
-//need to input an alive list 
-Map::Map(int rows, int cols){
-    cout<< "constructor" << endl;
-    /*struct cell{
-        int x = 0;
-        int y = 0;
-        int nbrs = 0;
-        bool live = false;
-    };*/
-    this->rows = rows;
-    this->cols = cols;
-    
-    //this->world;
 
-    
-    world = new Cell**[rows];
-    for(int  i = 0; i < rows; ++i){
-        this->world[i] = new Cell*[cols];
-        for(int  j = 0; j < cols; ++j){
-            //cout << "here" << i << j << endl;
-            this->world[i][j] = new Cell(i,j);
+Map::Map(int cols, int rows){
+    this -> cols = cols;
+    this ->rows = rows;
+    struct cell{
+        int x;
+        int y;
+        int live = 0;
+    };
+    cell board[rows*cols];
+    for (int i = 0; i < rows; i++){
+        for (int j = 0; j <cols; j++){
+            board[(i*this->cols) + j].x = j;
+            board[(i*this->rows) + i].y = i;
         }
     }
+}
+
+Map::~Map(){
+}
+
+void Map::play(){
+    for (int i = 0; i<this->alive.size(); i++){
+        
+    }
+}
+
+
+
+
 
 /*
-    vector<Cell *> w;
-    for (int i=0; i < this -> rows; i++){
-        for (int j=0; j < this -> cols; j++){
-            Cell *n = new Cell(i,j);
-            w.push_back(n);
-            cout << "here" << i << j << endl;
+//constructor
+//need to input an alive list 
+Map::Map(int cols, int rows){
+    cout<< "constructor" << endl;
+    this->rows = rows;
+    this->cols = cols;
+    world = new Cell**[cols];
+    for(int x = 0; x < rows; ++x){
+        this->world[x] = new Cell*[rows];
+        for(int y = 0; y < cols; ++y){
+            //cout << "here" << i << j << endl;
+            this->world[x][y] = new Cell(x,y);
         }
-        this->world.push_back(w);
-        w.clear();
     }
-*/
+
     //cout << this->world[0].size() << endl;
-    this->alive;
-    this->alive.push_back(this->world[1][2]);
+    //this->alive;
+    //this->alive.push_back(this->world[1][0]);
+    //this->alive.push_back(this->world[2][1]);
     this->alive.push_back(this->world[2][2]);
-    this->alive.push_back(this->world[3][2]);
-    this->world[1][2]->setLive();
-    this->world[2][2]->setLive();
-    this->world[3][2]->setLive();
-    this->nextBoard;
-    this->res;
+    this->alive.push_back(this->world[1][2]);
+    this->alive.push_back(this->world[0][2]);  
+    for (int i=0; i<this->alive.size(); i++) {
+        this->alive[i]->setLive();
+    }
+
+
+
 }
 
 //destructor
@@ -63,11 +76,11 @@ Map::~Map(){
     
     for (int i=0; i < this -> rows; i++){
         for (int j=0; j < this -> rows; j++){
-            delete world;
+            delete world[i][j];
             }
-        //delete[] this -> world[i];
+        delete[] this -> world[i];
     }
-    //delete[] this-> world;
+    delete[] this-> world;
 }
 
 int Map::get_rows(){
@@ -78,107 +91,131 @@ int Map::get_cols(){
     return this->cols;
 }
 
-void Map::checkNeighbors(int i, int j){
+void Map::checkNeighbors(Cell* curr){
     //cout << "in checkNeighbors " <<i << j<< endl;
+    int x = curr->getx();
+    int y = curr->gety();
+
     int l,r,a,b;
-    int count = 0;
     //locating position on board to determine if we need to wrap aroud world
-    if(j==0){ //left edge
+    if(x==0){ //left edge
         l=this->cols-1;
-        r=j+1;
+        r=x+1;
     }
-    else if(j==this->cols-1){ //right edge
-        l=j-1;
+    else if(x==this->cols-1){ //right edge
+        l=x-1;
         r=0;
     }
     else{ //normal case
-        l=j-1;
-        r=j+1;
+        l=x-1;
+        r=x+1;
     }
 
-    if(i==0){//top edge
+    if(y==0){//top edge
         a = this->rows-1;
-        b = i+1;
+        b = y+1;
     }
-    else if(i==this->rows-1){ //bottom edge
-        a = i-1;
+    else if(y==this->rows-1){ //bottom edge
+        a = y-1;
         b = 0;
     }
     else{ //normal case
-        a = i-1;
-        b = i+1;
+        a = y-1;
+        b = y+1;
     }
-/*
-    count = count + this->world[a][l]->isAlive(); //top left
-    count = count + this->world[a][j]->isAlive(); //above
-    count = count + this->world[a][r]->isAlive(); //top right
-    count = count + this->world[b][l]->isAlive(); //below left
-    count = count + this->world[b][j]->isAlive(); //below
-    count = count + this->world[b][r]->isAlive(); //below right
-    count = count + this->world[i][l]->isAlive(); //left
-    count = count + this->world[i][l]->isAlive(); //right
-*/
+    //figure out neighbors
+    int hz[3] = {a,b,y};
+    int vt[3] = {l,r,x};
+    cout << "at " << y << x << endl;
 
-    int hz[3] = {a,b,i};
-    int vt[3] = {l,r,j};
-    if (this->world[i][j]->isAlive()){
-        for (int g=0; g<3; g++){
-            for (int h=0; h<3; h++){
-                if (!this->world[hz[g]][vt[h]]->isAlive() && this->world[hz[g]][vt[h]]->getNbrs()!=0){
-                    checkNeighbors(hz[g], vt[h]);
-                }
-                else{
-                    count++;
+//alives have check == 1
+//add 1 to each nbr and that nbr check == 0, set chekc = 1 and add to vector checks
+
+    if (curr->isAlive()==0){
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                if (this->world[hz[i]][vt[j]]->isAlive()){
+                    curr->addNbr();
                 }
             }
         }
-        count--;
     }
     else{
-        for (int g=0; g<3; g++){
-            for (int h=0; h<3; h++){
-                if (this->world[hz[g]][vt[h]]->isAlive()){
-                    count++;
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                if (this->world[hz[i]][vt[j]]->isAlive()){
+                    curr->addNbr();
+                }
+                else if(this->world[hz[i]][vt[j]]->checked == 0){
+                    this->checks.push_back(this->world[hz[i]][vt[j]]);
                 }
             }
-        }
-    }
-        
-    this->world[i][j]->setNbr(count);
-
-    int c = this->world[i][j]->getNbrs();
-    if (this->world[i][j]->isAlive()==1){ //if the cell is alive
-       this->nextBoard.push_back(this->world[i][j]);
-    }
-
-    else{ //cell ded
-        if (c==3){ 
-            this->res.push_back(this->world[i][j]);
         }
     }
 }
+
+
+
+void Map::rule(Cell* curr){
+    int count = curr->getNbrs();
+    if (curr->live==1){ //if the cell is alive
+        if (count>1 && count<4){ //does it have 2 or 3 neighbors
+            this->nextAlive.push_back(curr);
+            curr->setLive();
+        }
+        else{//if not kill it
+            curr->reset();
+        }
+
+    }
+       
+
+    else{ //cell ded
+        if (count==3){ //if it has exactly three neighbors its alive now
+            curr->setLive();
+            this->nextAlive.push_back(curr);
+        }
+    }
+    curr->resetNbr();
+}
+
     
 
 void Map::play(){
-    for (int i=0; i < this -> rows; i++){
-        for (int j=0; j < this -> cols; j++){
-            checkNeighbors(i,j);
-        }        
+    for (int i = 0; i<this->alive.size(); i++){
+        checkNeighbors(this->alive[i]);
     }
-    for (int i; i<this->nextBoard.size(); i++){
-        if (!this->nextBoard[i]->isAlive()){
-            this->nextBoard[i]->setLive();
-        }
-    }
-    this->alive = this->nextBoard;
-    for (int i; i<this->res.size();i++){
-        //printf("line 173 while\n");
-        this->res[0]->reset();
-    }
-    printf("out fo while\n");
-    this->res.clear();
     
-
-
-    
+    for (int i = 0; i<this->checks.size(); i++){
+        checkNeighbors(this->checks[i]);
+    }
+    //this->nextAlive.clear();
+    for (int i = 0; i<this->checks.size(); i++){
+        rule(this->checks[i]);
+    }  
+    cout << endl << "alive: " << this->alive.size() << endl;
+    cout << "nextAlive: " << this->nextAlive.size() << endl;
+    cout << "checks " << this->checks.size() << endl;    
 }
+
+
+void Map::printBoard() {
+//cout <<"for loop 2 \n";
+cout << this->world[2][3]->getNbrs() <<endl
+;
+  for (int i = 0; i < this->rows; i++) {
+    for (int j = 0; j < this->cols; j++) {
+      //cout << map.world[i][j]->getx() << map.world[i][j]->gety() << " " ;
+      if (this->world[i][j]->live==1){
+        cout << "@";
+      }
+      else{
+        cout << ".";
+      }
+      cout << " ";
+
+    }
+    cout << endl;
+  }
+}
+*/

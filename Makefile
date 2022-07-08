@@ -4,7 +4,7 @@
 #	g++ -I src/include -L src/lib -o gol main.cpp -lmingw32 -lSDL2main -lSDL2
 
 # Configure compiler settings
-CXX=g++
+CXX=clang++
 CXXFLAGS=-g -Wall 
 # The object files for the program.
 OFILES = map.o cell.o
@@ -17,21 +17,26 @@ INCLUDES = -Isrc/include  -I../include
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
 #   their path using -Lpath, something like:
-LFLAGS = -Lsrc/lib  -L../lib
+
+#LFLAGS = -Lsrc/lib  -L../lib
+#LFLAGS = -Lsrc/lib 
 
 # define any libraries to link into executable:
 #   if I want to link in libraries (libx.so or libx.a) I use the -llibname 
 #   option, something like (this will link in libmylib.so and libm.so:
-LIBS = -lmingw32 -lSDL2main -lSDL2
+
+#LIBS = -lmingw32 -lSDL2main -lSDL2
+#LIBS = -lSDL2main -lSDL2
+
 # UnitTest++ keeps its object files in this directory.
 UNITTEST_LIB = -lUnitTest++
 
-all: gol
+all: main
 
 # This target builds your main program.
-gol: $(HFILES) $(OFILES) main.o
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(LFLAGS) -o $@ main.o $(OFILES) $(LIBS)
-
+main: $(HFILES) $(OFILES) main.o
+#	$(CXX) $(CXXFLAGS) $(INCLUDES) $(LFLAGS) -o $@ main.o $(OFILES) $(LIBS)
+	$(CXX) $(CXXFLAGS) $(INCLUDES)  -o $@ main.o $(OFILES) 
 # This target describes how to compile a .o file from a .cpp file.
 %.o: %.cpp $(HFILES)
 	$(CXX) $(CXXFLAGS) -c -o $@ $<

@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include <vector>
 #include <stack>
-#include <windows.h>
+//#include <windows.h>
 #include <chrono>
-
+ 
 //#include <SDL2/SDL.h>
 
 #include "map.h"
@@ -22,58 +22,7 @@
 using namespace std;
 
 
-void printBoard(Map map) {
-cout << "inPrintBoard" << endl;
-  /* Print the round number. */
-//  fprintf(stderr, "Round: %d\n");
 
-  for (int i = 0; i < map.rows; i++) {
-    for (int j = 0; j < map.cols; j++) {
-      cout << map.world[i][j]->getx() << map.world[i][j]->gety() << " " ;
-    }
-    cout << endl;
-  }
-
-  for (int i = 0; i < map.rows; i++) {
-    for (int j = 0; j < map.cols; j++) {
-      //cout << map.world[i][j]->getx() << map.world[i][j]->gety() << " " ;
-      if (map.world[i][j]->isAlive()==1){
-        cout << "@";
-      }
-      else{
-        cout << ".";
-      }
-      cout << " ";
-
-    }
-    cout << endl;
-  }
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-  cout << endl;
-}
 
 int main(){
   //vector<vector<int>> a = {{1,2},{2,2},{3,2}};
@@ -87,12 +36,15 @@ int main(){
 
     i++;
   }*/
-  printBoard(map);
-  printf("out of first one");
-  printBoard(map);
-  cout << endl;
-  map.play();
-  printBoard(map);
+
+  
+  for (int i = 0; i<4; i++){
+
+    map.printBoard();
+    map.play();
+    cout << endl<<endl;
+  }
+  map.printBoard();
 
 
   return 0;

@@ -10,6 +10,7 @@ Cell::Cell(int x, int y){
     this->y = y;
     this->live = 0;
     this->nbrs = 0; 
+    this->checked = 0;
 
 }
 
@@ -45,4 +46,8 @@ void Cell::addNbr(){
 void Cell::reset(){
     this->nbrs = 0;
     this->live = 0;
+}
+
+void Cell::resetNbr(){
+    this->nbrs = 0;
 }

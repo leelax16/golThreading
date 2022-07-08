@@ -1,96 +1,84 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 4.2.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# Make data base, printed on Fri Jun 24 16:07:50 2022
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Fri Jul  8 13:22:24 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
- 
 # automatic
 ?F = $(notdir $?)
-# environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
-# default
-.SHELLFLAGS := -c
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 15)
+# makefile (from `Makefile', line 15)
 INCLUDES = -Isrc/include  -I../include
 # automatic
+ 
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /mnt/c/Users/ndlee/Dev/golThread
+CURDIR := /Users/nathan/devProjects/golThreading
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /home/leelax/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node
-# makefile (from 'Makefile', line 1)
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# 'override' directive
-GNUMAKEFLAGS := 
-# makefile (from 'Makefile', line 8)
+# makefile (from `Makefile', line 8)
 CXXFLAGS = -g -Wall 
-# environment
-XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-LESSOPEN = | /usr/bin/lesspipe %s
+__CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_CWD = /mnt/c/Users/ndlee/AppData/Local/Programs/Microsoft VS Code
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/k0/9sq2dz9x6cbgmhrcrxrkqkxm0000gn/T/vscode-ipc-1854e72e-6df0-4307-afbd-c782559df1ba.sock
 # environment
-PATH = /home/leelax/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.3.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/mingw64/bin:/mnt/c/mingw64/bin/make.exe:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/ndlee/Dev/valgrind-3.19.0:/mnt/c/Users/ndlee/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/ndlee/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/ndlee/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ndlee/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ndlee/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/snap/bin
-# makefile (from 'Makefile', line 27)
+VSCODE_CWD = /
+# environment
+PATH = /Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+# makefile (from `Makefile', line 32)
 UNITTEST_LIB = -lUnitTest++
-# environment
-XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-cefe8ab7-ca0b-4eec-9bb8-346e99c626c8.sock
+ELECTRON_RUN_AS_NODE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.fimra9oyN0/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
-# environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /mnt/c/Users/ndlee/Dev/golThread
+PWD = /Users/nathan/devProjects/golThreading
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /Users/nathan
 # default
-.LOADED := 
-# environment
-WSL_INTEROP = /run/WSL/11_interop
-# environment
-PULSE_SERVER = /mnt/wslg/PulseServer
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# environment
-HOME = /home/leelax
-# environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
-# makefile (from 'Makefile', line 12)
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# makefile (from `Makefile', line 12)
 HFILES = $(shell ls -1 *.h)
 # environment
-LOGNAME = leelax
+VSCODE_CODE_CACHE_PATH = /Users/nathan/Library/Application Support/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
+# environment
+LOGNAME = nathan
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
@@ -98,83 +86,71 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-MAKELEVEL := 0
+XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+SHLVL = 2
 # default
-MAKE_VERSION := 4.2.1
+MAKE_VERSION := 3.81
 # environment
-USER = leelax
+USER = nathan
 # makefile
 .DEFAULT_GOAL := all
-# environment
-NAME = DESKTOP-AV9FK6N
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
-# makefile (from 'Makefile', line 20)
-LFLAGS = -Lsrc/lib  -L../lib
-# environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/ndlee/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
-MAKE_COMMAND := make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
+# environment
+TMPDIR = /var/folders/k0/9sq2dz9x6cbgmhrcrxrkqkxm0000gn/T/
 # automatic
 *F = $(notdir $*)
-# makefile
-MAKEFLAGS = pqrR
 # environment
-MFLAGS = -pqrR
+VSCODE_IPC_HOOK = /Users/nathan/Library/Application Support/Code/1.63.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.7088712.7088718
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-VSCODE_HANDLES_SIGPIPE = true
-# 'override' directive
-.SHELLSTATUS := 0
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# makefile (from 'Makefile', line 7)
-CXX = g++
+# makefile (from `Makefile', line 7)
+CXX = clang++
 # environment
 LC_ALL = C
-# environment
-HOSTTYPE = x86_64
-# makefile (from 'Makefile', line 25)
-LIBS = -lmingw32 -lSDL2main -lSDL2
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# environment
-WAYLAND_DISPLAY = wayland-0
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# makefile (from 'Makefile', line 10)
+.INCLUDE_DIRS = /usr/local/include
+# makefile (from `Makefile', line 10)
 OFILES = map.o cell.o
-# default
-.RECIPEPREFIX := 
+# environment
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
-WSL_DISTRO_NAME = Ubuntu
-# environment
-MOTD_SHOWN = update-motd
+VSCODE_PID = 19469
 # variable set hash-table stats:
-# Load=81/1024=8%, Rehash=0, Collisions=4/125=3%
+# Load=68/1024=7%, Rehash=0, Collisions=1/103=1%
 
 # Pattern-specific Variable Values
 
@@ -182,43 +158,41 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 63, inode 3096224744122119): 17 files, no impossibilities.
+# . (device 16777221, inode 16741558): 18 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 %.o: %.cpp cell.h map.h
-#  recipe to execute (from 'Makefile', line 37):
+#  commands to execute (from `Makefile', line 42):
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	
 
 # 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
 
-all: gol
+all: main
 #  Phony target (prerequisite of .PHONY).
-#  Command line target.
+#  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
 
 .PHONY: clean all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-cell.o: cell.cpp cell.h map.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'cell'
-#  Last modified 2022-06-19 23:45:21.0481182
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 37):
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+# Not a target:
+cell.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -229,34 +203,39 @@ cell.o: cell.cpp cell.h map.h
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-19 23:47:55.3535765
+#  Last modified 2022-06-25 11:46:51
 #  File has been updated.
 #  Successfully updated.
-
-# Not a target:
-main.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-19 22:57:52.9551183
-#  File has been updated.
-#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 map.o: map.cpp cell.h map.h
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'map'
-#  Last modified 2022-06-19 23:17:39.1711965
+#  Implicit/static pattern stem: `map'
+#  Last modified 2022-06-27 22:02:59
 #  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 37):
+#  Needs to be updated (-q is set).
+# automatic
+# @ := map.o
+# automatic
+# % := 
+# automatic
+# * := map
+# automatic
+# + := map.cpp cell.h map.h
+# automatic
+# | := 
+# automatic
+# < := map.cpp
+# automatic
+# ^ := map.cpp cell.h map.h
+# automatic
+# ? := map.cpp map.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 42):
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-
-main.o: main.cpp cell.h map.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-19 23:17:40.6842336
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 37):
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	
 
 # Not a target:
 .DEFAULT:
@@ -269,80 +248,68 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
+#  commands to execute (from `Makefile', line 47):
 	rm -f *.o
 	rm -f gol
+	
 
 # Not a target:
 cell.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-19 22:57:49.3923335
+#  Last modified 2022-06-25 16:10:31
 #  File has been updated.
 #  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-cell.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-19 19:02:18.2240959
-#  File has been updated.
-#  Successfully updated.
-
-gol: cell.h map.h map.o cell.o main.o
- 
+main: cell.h map.h map.o cell.o main.o
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
+#  Last modified 2022-06-27 22:03:01
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := gol
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := cell.h map.h map.o cell.o main.o
-# automatic
-# | := 
-# automatic
-# < := cell.h
-# automatic
-# ^ := cell.h map.h map.o cell.o main.o
-# automatic
-# ? := cell.h map.h map.o cell.o main.o
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/18=6%
-#  recipe to execute (from 'Makefile', line 33):
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(LFLAGS) -o $@ main.o $(OFILES) $(LIBS)
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  commands to execute (from `Makefile', line 39):
+	$(CXX) $(CXXFLAGS) $(INCLUDES)  -o $@ main.o $(OFILES) 
+	
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 map.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-19 22:57:48.3651738
+#  Last modified 2022-07-02 13:24:35
 #  File has been updated.
 #  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 map.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-19 22:57:47.4502362
+#  Last modified 2022-07-02 13:24:35
 #  File has been updated.
 #  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=5/58=9%
+# Load=13/1024=1%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 213 B / avg = 7 B
-# current buf: size = 8162 B / used = 213 B / count = 30 / avg = 7 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 68 / hit rate = 55%
-# hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=4/68=6%
-# Finished Make data base on Fri Jun 24 16:07:50 2022
+# Finished Make data base on Fri Jul  8 13:22:24 2022
 
  

@@ -5,10 +5,12 @@ class Cell{
     private:
         int x, y;
         int nbrs;
-        int live;
+
+
 
     public:
-
+        bool live;
+        bool checked;
         Cell(int x, int y);
         Cell();
         int getx();
@@ -24,6 +26,8 @@ class Cell{
         void setLive();
         //resets neighbor count to 0
         void reset();
+
+        void resetNbr();
 
         //temp functions to test in terminal
 
