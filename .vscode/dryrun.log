@@ -1,8 +1,14 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/nathan/devProjects/golThreading'
-clang++ -g -Wall  -c -o map.o map.cpp
-clang++ -g -Wall  -c -o cell.o cell.cpp
-clang++ -g -Wall  -c -o main.o main.cpp
-clang++ -g -Wall  -Isrc/include  -I../include  -o main main.o map.o cell.o 
-make: Leaving directory `/Users/nathan/devProjects/golThreading'
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/ndlee/dev/golThread'
+ 
+process_begin: CreateProcess(NULL, ls -1 *.h, ...) failed.
+makefile:35: pipe: No error
+
+process_begin: CreateProcess(NULL, ls -1 *.h, ...) failed.
+makefile:39: pipe: No error
+
+make: *** No rule to make target 'world.o', needed by 'main'.
+
+g++ -g -std=c++20 -Wall  -c -o main.o main.cpp
+make: Leaving directory 'c:/Users/ndlee/dev/golThread'
  

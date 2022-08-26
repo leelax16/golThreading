@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libprogram_files.a CMakeFiles/program_files.dir/world.cpp.obj CMakeFiles/program_files.dir/SDLstuff.cpp.obj CMakeFiles/program_files.dir/threadUtil.cpp.obj
+C:\mingw64\bin\ranlib.exe libprogram_files.a

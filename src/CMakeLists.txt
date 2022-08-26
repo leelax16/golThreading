@@ -1,0 +1,1 @@
+add_library(program_files world.cpp SDLstuff.cpp threadUtil.cpp)

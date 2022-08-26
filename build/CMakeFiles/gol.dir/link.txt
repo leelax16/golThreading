@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\gol.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\gol.dir/objects.a @CMakeFiles\gol.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\gol.dir/objects.a -Wl,--no-whole-archive -o gol.exe -Wl,--out-implib,libgol.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\gol.dir\linklibs.rsp

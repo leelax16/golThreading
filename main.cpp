@@ -7,48 +7,100 @@
  * using graphics libraries and my target is to learn SDL2.
  * 
  ******************************************************************************/
-
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
 #include <vector>
-#include <stack>
-//#include <windows.h>
-#include <chrono>
- 
-//#include <SDL2/SDL.h>
 
-#include "map.h"
+#include "src/world.h"
+#include "src/SDLstuff.h"
+//#include "thread_util.h"
+
+/*
+static int shader(const std::string& vertexShader, const std::string& fragmentShader){
+  
+}
+*/
+//#include <stack>
+//#include <windows.h>
+//#include <chrono>
+//static int max_threads = 4;//std::thread::hardware_concurrency();
 
 using namespace std;
 
 
 
 
-int main(){
-  //vector<vector<int>> a = {{1,2},{2,2},{3,2}};
-  Map map = Map(5, 5);
-  cout << endl;
-  //int i = 0;
-  /*
-  while (1==1){
-    cout << endl << "iteration:" << i << endl << endl;
-    //map.play();
 
-    i++;
-  }*/
+//mutex m;
+//condition_variable cond1, cond2;
+
+SDL_Window *window = NULL;
+SDL_Renderer *renderer;
+int rWidth;
+int rHeight;
+bool is_running;
+
+ 
+void printBoard(World w,int rows, int cols){
+  for (int i = 0; i<rows; i++){
+    for (int j = 0; j<cols; j++){
+      //printf("pos: %d , %d \n", i, j);
+      //printf("%d %d\n",w.board[i][j].x,w.board[i][j].y);
+      if (w.board[(i*w.cols) + j].live){
+        printf("@");
+      }
+      else{
+        printf(".");
+      }
+    } 
+    cout << endl;
+
+  }
+}
+
+int rows = 100;
+int cols = 100;
+
+int main(int argc, char **argv){
+   
+  World w = World(rows,cols);
+
+  disp d = disp(rows, cols, &w);
+  d.mainLoop(rows, cols);
+
+/*
+  
+  printf("max threads: %d\n", max_threads);
+ 
+  //World w = World(8,8);
+  for (int f = 0; f<10; f++){ 
+    cout << "round " << f << endl;
+    printBoard(w,rows,cols);
+    cout << w.alive.size() << endl;
+    if (max_threads<w.alive.size()){
+      main_thread_func(&w);
+      //create_thread(max_threads, w);
+    }
+    else{
+      printf("wasnt bigger\n");
+    }
+    system("cls");
+    //w.play();
+    cout << endl;
+    
+  } 
 
   
-  for (int i = 0; i<4; i++){
 
-    map.printBoard();
-    map.play();
-    cout << endl<<endl;
-  }
-  map.printBoard();
-
+*/
 
   return 0;
 }
+
+
+
+
+
 
 //class for the game fucntions
 
@@ -56,4 +108,4 @@ int main(){
 
 //initialization for window
 
-//fucntion to incoroporate window with game map and fucntions
+

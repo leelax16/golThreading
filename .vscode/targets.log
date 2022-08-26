@@ -1,156 +1,211 @@
-make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 3.81
-# Copyright (C) 2006  Free Software Foundation, Inc.
-# This is free software; see the source for copying conditions.
-# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+process_begin: CreateProcess(NULL, ls -1 *.h, ...) failed.
+makefile:35: pipe: No error
+process_begin: CreateProcess(NULL, ls -1 *.h, ...) failed.
+makefile:39: pipe: No error
+make: *** No rule to make target 'world.o', needed by 'main'.  Stop.
 
-# This program built for i386-apple-darwin11.3.0
- 
+# GNU Make 4.3
+# Built for x86_64-w64-mingw32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  8 13:22:24 2022
+# Make data base, printed on Thu Aug 25 23:10:06 2022
 
 # Variables
 
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
 # environment
-VSCODE_LOG_NATIVE = false
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# makefile (from `Makefile', line 15)
-INCLUDES = -Isrc/include  -I../include
-# automatic
- 
-@D = $(patsubst %/,%,$(dir $@))
-# automatic
-@F = $(notdir $@)
-# makefile
-CURDIR := /Users/nathan/devProjects/golThreading
-# makefile
-SHELL = /bin/sh
+SYSTEMDRIVE = C:
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+LC_ALL = C
 # environment
-_ = /usr/bin/make
-# makefile (from `Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 8)
-CXXFLAGS = -g -Wall 
+USERPROFILE = C:\Users\ndlee
+# makefile (from 'makefile', line 8)
+OFILES = world.o
 # environment
-VSCODE_VERBOSE_LOGGING = true
+LOCALAPPDATA = C:\Users\ndlee\AppData\Local
 # environment
-__CFBundleIdentifier = com.microsoft.VSCode
+VSCODE_CWD = C:\Users\ndlee\AppData\Local\Programs\Microsoft VS Code
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/k0/9sq2dz9x6cbgmhrcrxrkqkxm0000gn/T/vscode-ipc-1854e72e-6df0-4307-afbd-c782559df1ba.sock
+SYSTEMROOT = C:\Windows
 # environment
-VSCODE_CWD = /
+PROCESSOR_LEVEL = 6
 # environment
-PATH = /Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-# makefile (from `Makefile', line 32)
-UNITTEST_LIB = -lUnitTest++
-# environment
-VSCODE_LOG_STACK = false
-# environment
-ELECTRON_RUN_AS_NODE = 1
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # default
-.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+MAKE_COMMAND := make.exe
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.fimra9oyN0/Listeners
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15804_ECDVENEVPPMPOJZQ
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_PIPE_LOGGING = true
+VSCODE_CODE_CACHE_PATH = C:\Users\ndlee\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
-PWD = /Users/nathan/devProjects/golThreading
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
-# environment
-HOME = /Users/nathan
+LANG = C
 # default
-MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
-# makefile (from `Makefile', line 12)
-HFILES = $(shell ls -1 *.h)
+.LOADED := 
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/nathan/Library/Application Support/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
+TMP = C:\Users\ndlee\AppData\Local\Temp
+# makefile
+MAKEFLAGS = pqrR
 # environment
-LOGNAME = nathan
+ONEDRIVE = C:\Users\ndlee\OneDrive
+# makefile
+CURDIR := c:/Users/ndlee/dev/golThread
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
-^D = $(patsubst %/,%,$(dir $^))
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
-XPC_FLAGS = 0x0
+PROGRAMFILES = C:\Program Files
+# environment
+MFLAGS = -pqrR
 # default
-MAKE = $(MAKE_COMMAND)
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST := makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 15804
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# makefile (from 'makefile', line 10)
+HFILES = $(shell ls -1 *.h)
+# makefile (from 'makefile', line 13)
+INCLUDES = -Isrc/include  -I../include
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\ndlee\OneDrive
+# default
+MAKE_HOST := x86_64-w64-mingw32
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := sh.exe
+# environment
+HOMEPATH = \Users\ndlee
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 2
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# environment
+WINDIR = C:\Windows
+# environment
+MAKELEVEL := 0
 # default
-MAKE_VERSION := 3.81
+MAKE = $(MAKE_COMMAND)
 # environment
-USER = nathan
-# makefile
-.DEFAULT_GOAL := all
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# default
-MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# default
-.VARIABLES := 
+PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Users\ndlee\Dev\valgrind-3.19.0;C:\Program Files\CMake\bin;C:\mingw64\bin;C:\mingw64\x86_64-w64-mingw32\bin;C:\Users\ndlee\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ndlee\AppData\Local\Programs\Python\Python310\;C:\Users\ndlee\AppData\Local\Microsoft\WindowsApps;C:\Users\ndlee\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ndlee\AppData\Local\GitHubDesktop\bin;C:\msys64\mingw64\bin;
 # environment
-TMPDIR = /var/folders/k0/9sq2dz9x6cbgmhrcrxrkqkxm0000gn/T/
-# automatic
-*F = $(notdir $*)
+ZES_ENABLE_SYSMAN = 1
 # environment
-VSCODE_IPC_HOOK = /Users/nathan/Library/Application Support/Code/1.63.2-main.sock
-# makefile
-MAKEFLAGS = Rrqp
-# environment
-MFLAGS = -Rrqp
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.7088712.7088718
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# automatic
-+F = $(notdir $+)
-# environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
+COMPUTERNAME = DESKTOP-AV9FK6N
 # default
 MAKEFILES := 
 # automatic
-<F = $(notdir $<)
-# makefile (from `Makefile', line 7)
-CXX = clang++
-# environment
-LC_ALL = C
-# automatic
 ^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+LOGONSERVER = \\DESKTOP-AV9FK6N
+# environment
+USERNAME = ndlee
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = DESKTOP-AV9FK6N
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# makefile
+.DEFAULT_GOAL := all
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 127
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# makefile (from 'makefile', line 30)
+UNITTEST_LIB = -lUnitTest++
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-AV9FK6N
+# environment
+NUMBER_OF_PROCESSORS = 16
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\ndlee\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\ndlee\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\fad1c4d47a9ff414cd6a266ae4e89d38-1.70.2-main-sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
 # default
 SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# makefile (from 'makefile', line 6)
+CXXFLAGS = -g -std=c++20 -Wall 
 # default
-.INCLUDE_DIRS = /usr/local/include
-# makefile (from `Makefile', line 10)
-OFILES = map.o cell.o
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync
 # environment
-MAKELEVEL := 0
+PROCESSOR_REVISION = a701
+# makefile (from 'makefile', line 5)
+CXX = g++
 # environment
-LANG = C
-# environment
-VSCODE_PID = 19469
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 167 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=1/103=1%
+# Load=94/1024=9%, Rehash=0, Collisions=8/132=6%
 
 # Pattern-specific Variable Values
 
@@ -158,30 +213,25 @@ VSCODE_PID = 19469
 
 # Directories
 
-# . (device 16777221, inode 16741558): 18 files, no impossibilities.
+# . (key c:/Users/ndlee/dev/golThread, mtime 1661213071): 11 files, 1 impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 11 files, 1 impossibilities in 1 directories.
 
 # Implicit Rules
 
-%.o: %.cpp cell.h map.h
-#  commands to execute (from `Makefile', line 42):
+%.o: %.cpp
+#  recipe to execute (from 'makefile', line 40):
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-	
 
 # 1 implicit rules, 0 (0.0%) terminal.
-
 # Files
 
 all: main
 #  Phony target (prerequisite of .PHONY).
-#  Command-line target.
+#  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  File has not been updated.
 
 .PHONY: clean all
 #  Implicit rule search has not been done.
@@ -189,89 +239,39 @@ all: main
 #  File has not been updated.
 
 # Not a target:
-cell.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-25 11:46:51
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-map.o: map.cpp cell.h map.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `map'
-#  Last modified 2022-06-27 22:02:59
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := map.o
-# automatic
-# % := 
-# automatic
-# * := map
-# automatic
-# + := map.cpp cell.h map.h
-# automatic
-# | := 
-# automatic
-# < := map.cpp
-# automatic
-# ^ := map.cpp cell.h map.h
-# automatic
-# ? := map.cpp map.h
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 42):
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
-	
-
-# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+world.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-08 14:24:00
+#  File has been updated.
+#  Successfully updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 47):
+#  recipe to execute (from 'makefile', line 45):
 	rm -f *.o
 	rm -f gol
-	
 
-# Not a target:
-cell.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-25 16:10:31
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-main: cell.h map.h map.o cell.o main.o
+main: world.o main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-27 22:03:01
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  commands to execute (from `Makefile', line 39):
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 37):
 	$(CXX) $(CXXFLAGS) $(INCLUDES)  -o $@ main.o $(OFILES) 
-	
 
 # Not a target:
 main.o:
@@ -279,37 +279,20 @@ main.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-map.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-02 13:24:35
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-map.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-02 13:24:35
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/41=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/29=0%
 # VPATH Search Paths
 
-# No `vpath' search paths.
+# No 'vpath' search paths.
 
-# No general (`VPATH' variable) search path.
+# No general ('VPATH' variable) search path.
 
-# # of strings in strcache: 1
-# # of strcache buffers: 1
-# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# strcache buffers: 1 (0) / strings = 22 / storage = 155 B / avg = 7 B
+# current buf: size = 8162 B / used = 155 B / count = 22 / avg = 7 B
 
-# Finished Make data base on Fri Jul  8 13:22:24 2022
+# strcache performance: lookups = 35 / hit rate = 37%
+# hash-table stats:
+# Load=22/8192=0%, Rehash=0, Collisions=1/35=3%
+# Finished Make data base on Thu Aug 25 23:10:06 2022
 
  

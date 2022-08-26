@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/ndlee/Dev/golThread/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DSDL_MAIN_HANDLED @CMakeFiles/gol.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++20 -o CMakeFiles\\gol.dir\\main.cpp.obj -c C:\\Users\\ndlee\\Dev\\golThread\\main.cpp",
+  "file": "C:/Users/ndlee/Dev/golThread/main.cpp"
+},
+{
+  "directory": "C:/Users/ndlee/Dev/golThread/build/src",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/program_files.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++20 -o CMakeFiles\\program_files.dir\\world.cpp.obj -c C:\\Users\\ndlee\\Dev\\golThread\\src\\world.cpp",
+  "file": "C:/Users/ndlee/Dev/golThread/src/world.cpp"
+},
+{
+  "directory": "C:/Users/ndlee/Dev/golThread/build/src",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/program_files.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++20 -o CMakeFiles\\program_files.dir\\SDLstuff.cpp.obj -c C:\\Users\\ndlee\\Dev\\golThread\\src\\SDLstuff.cpp",
+  "file": "C:/Users/ndlee/Dev/golThread/src/SDLstuff.cpp"
+},
+{
+  "directory": "C:/Users/ndlee/Dev/golThread/build/src",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/program_files.dir/includes_CXX.rsp -g   -Wall -g -std=gnu++20 -o CMakeFiles\\program_files.dir\\threadUtil.cpp.obj -c C:\\Users\\ndlee\\Dev\\golThread\\src\\threadUtil.cpp",
+  "file": "C:/Users/ndlee/Dev/golThread/src/threadUtil.cpp"
+}
+]

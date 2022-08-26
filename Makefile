@@ -1,13 +1,11 @@
-
-
 #all:
 #	g++ -I src/include -L src/lib -o gol main.cpp -lmingw32 -lSDL2main -lSDL2
 
 # Configure compiler settings
-CXX=clang++
-CXXFLAGS=-g -Wall 
+CXX=g++
+CXXFLAGS=-g -std=c++20 -Wall 
 # The object files for the program.
-OFILES = map.o cell.o
+OFILES = world.o
 # The header files for the program
 HFILES = $(shell ls -1 *.h)
 # define any directories containing header files other than /usr/include
